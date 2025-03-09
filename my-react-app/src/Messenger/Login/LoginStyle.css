@@ -138,12 +138,12 @@ input:focus {
     box-sizing: border-box;
 }
 
-button:enabled {
+.changeButton:enabled {
     cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover:enabled {
+.changeButton:hover:enabled {
     background-color: #3C4F7A; 
     color: #F8F8FF; 
     transform: scale(1.05);

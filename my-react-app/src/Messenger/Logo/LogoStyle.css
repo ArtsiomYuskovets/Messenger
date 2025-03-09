@@ -1,0 +1,60 @@
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a1a2e;
+    background-image: url('C:\Users\HP\OneDrive\Рабочий стол\chat-react\Messenger\my-react-app\src\assets\звёзды на заднем фоне, чуть темнее.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    color: #EAEAEA; 
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8); 
+    transition: opacity 1s;
+
+}
+.imgLogo {
+    display: flex;
+    justify-self: center;
+    height: 35vh;
+    width: auto; 
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); 
+}
+
+.h1Logo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF; 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); 
+}
+
+.pLogo {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #e6e2e2; 
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.logoButton {
+    margin-bottom:100px ;
+    background-color: #034b8f; 
+    color: #EAEAEA;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4); 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); 
+}
+
+.logoButton:hover {
+    background-color: #087fee; 
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7); 
+    transform: scale(1.05); 
+}

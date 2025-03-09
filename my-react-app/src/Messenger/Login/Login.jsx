@@ -6,7 +6,6 @@ export default function Login({onLogin}) {
     const [isRegistred, setIsRegistred] = useState(false);
     const [loginData, setLoginData] = useState({ email: '', password: '' });
     const [registerData, setRegisterData] = useState({ username: '', email: '', password: '' });
-    const [isConfirm, setIsConfirm]=useState(false);
     const navigate = useNavigate();
 
     const handleLoginSubmit = (e) => {
