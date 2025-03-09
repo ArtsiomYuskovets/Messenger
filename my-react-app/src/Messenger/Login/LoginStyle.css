@@ -4,7 +4,7 @@
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #0A0B2A, #1F2A44); /* Deep cosmic blue gradient */
-    background-image: url("C:\Users\HP\OneDrive\Рабочий стол\chat-react\my-react-app\src\assets\звёзды на заднем фоне, чуть темнее.png");
+    background-image: url("C:\Users\HP\OneDrive\Рабочий стол\chat-react\Messenger\my-react-app\src\assets\звёзды на заднем фоне, чуть темнее.png");
     background-size: cover;
     background-position: center;
 }
