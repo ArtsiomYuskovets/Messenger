@@ -1,0 +1,151 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0A0B2A, #1F2A44); /* Deep cosmic blue gradient */
+    background-image: url("C:\Users\HP\OneDrive\Рабочий стол\chat-react\my-react-app\src\assets\звёзды на заднем фоне, чуть темнее.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: auto;
+    padding: 25px;
+    background-color: rgba(10, 11, 42, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.1); 
+}
+
+.loginHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.loginHeader + h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #E6E6FA; 
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(230, 230, 250, 0.5); 
+}
+
+.space {
+    height: 20px;
+    width: 10px;
+}
+
+.changeButton {
+    width: 120px;
+    background-color: #2C2F5E; 
+    color: #B0C4DE; 
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid #4B5EAA; 
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.changeButton:hover {
+    background-color: #3F4A8C; 
+    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+}
+
+.changeButton:disabled {
+    background-color: #1F2638; 
+    cursor: not-allowed;
+    color: #778899; 
+}
+
+.dataForm {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.formWrapper {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: #D8D8F0; 
+}
+
+.show-login {
+    transform: translateX(0);
+}
+
+.show-register {
+    transform: translateX(-50%);
+}
+
+input {
+    width: 85%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #1A1E4A; 
+    color: #F0F8FF; 
+    border: 1px solid #3C4F7A; 
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #7B68EE; 
+    outline: none;
+    box-shadow: 0 0 8px rgba(123, 104, 238, 0.5); 
+}
+
+.submitButton {
+    width: 85%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 10px;
+    background: linear-gradient(135deg, #483D8B, #6A5ACD); 
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submitButton:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6A5ACD, #8470FF); 
+    box-shadow: 0 0 15px rgba(132, 112, 255, 0.6); 
+}
+
+* {
+    font-family: 'Arial', sans-serif !important;
+    box-sizing: border-box;
+}
+
+button:enabled {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover:enabled {
+    background-color: #3C4F7A; 
+    color: #F8F8FF; 
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+}

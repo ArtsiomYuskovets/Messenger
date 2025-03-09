@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 92vh ;
+    width: 60vw;
+}
+.messegeArea{
+    height: 80vh ;
+    width: 60vw;
+    background-color: #2E2E2E;
+}
+#inputArea{
+    width: 50vw;
+}
+#inputButton{
+    min-width: 10vw;
+}
