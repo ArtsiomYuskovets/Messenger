@@ -1,27 +1,44 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginStyle.css';
+import { loginUser, registerUser } from './api';
 
-export default function Login({onLogin}) {
+export default function Login({ onLogin }) {
     const [isRegistred, setIsRegistred] = useState(false);
     const [loginData, setLoginData] = useState({ email: '', password: '' });
-    const [registerData, setRegisterData] = useState({ username: '', email: '', password: '' });
+    const [registerData, setRegisterData] = useState({ username: '', email: '', password: '', confirmPassword: '' });
     const navigate = useNavigate();
 
-    const handleLoginSubmit = (e) => {
+    const handleLoginSubmit = async (e) => {
         e.preventDefault();
-        if (loginData.email === "123@mai.ru" && loginData.password === "123") {
-            onLogin();
-            navigate('/app');
-        } else {
-            alert("Invalid email or password");
-        }
-    };
+        try {
+            const response = await loginUser(loginData);
+            if (response.ok) {
+                onLogin();
+                navigate('/app');
+            } else {
+                alert("Неверные email или пароль");
+            }
+        } catch (error) {
+            console.error("Ошибка при авторизации:", error);
+        };
+    }
 
-    const handleRegSubmit = (e) => {
+    const handleRegSubmit = async (e) => {
         e.preventDefault();
-        alert("Success");
+        if (registerData.password !== registerData.confirmPassword) {
+            alert("Пароли не совпадают");
+            return;
+        }
+        try{
+        const response = await registerUser(loginData);
+        alert("Регистрация успешна!");
         setIsRegistred(false);
+        }
+        catch(error){
+            console.error("Ошибка регистрации:", error);
+        }
+        
     };
 
     return (
@@ -83,6 +100,12 @@ export default function Login({onLogin}) {
                                     placeholder="Password"
                                     value={registerData.password}
                                     onChange={(e) => setRegisterData({ ...registerData, password: e.target.value })}
+                                />
+                                <input
+                                    type="password"
+                                    placeholder="Confirm Password"
+                                    value={registerData.confirmPassword}
+                                    onChange={(e) => setRegisterData({ ...registerData, confirmPassword: e.target.value })}
                                 />
                                 <button className="submitButton" type="submit">
                                     Зарегистрироваться
